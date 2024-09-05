@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Twitter Profile Blocker",
+  "version": "1.0",
+  "description": "Shift-click to block Twitter users from your feed.",
+  "permissions": [],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*", "https://x.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "48": "twitterblocklogo.png"
+  }
+}
